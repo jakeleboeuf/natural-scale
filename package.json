@@ -1,0 +1,40 @@
+{
+  "name": "natural-scale",
+  "version": "1.2.1",
+  "description": "A simple ratio-based scale to make your type not bad",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --watch",
+    "ci:test": "jest",
+    "cover": "nyc report --reporter=html --reporter=lcov > coverage.lcov && codecov",
+    "clean": "rm -rf dist/__tests__ dist/__mocks__",
+    "build": "tsc && npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakeleboeuf/natural-scale.git"
+  },
+  "keywords": [
+    "type",
+    "scale",
+    "rhythm",
+    "modular",
+    "fractional",
+    "typography",
+    "size"
+  ],
+  "author": "Jake LeBoeuf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakeleboeuf/natural-scale/issues"
+  },
+  "homepage": "https://github.com/jakeleboeuf/natural-scale#readme",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "jest": "^22.4.3",
+    "nyc": "^11.7.1",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
+  }
+}
