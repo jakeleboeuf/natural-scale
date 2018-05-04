@@ -8,7 +8,7 @@ export const getStep = ({ step, interval, unit }: any) => {
 
   // Round to 3 decimal places
   let value: any = Math.floor(result * 1000) / 1000;
-  return unit ? (value += unit) : value;
+  return unit && unit !== false ? (value += unit) : value;
 };
 
 export const getSteps = ({ interval, unit }: any) => {

@@ -7,9 +7,10 @@
   "scripts": {
     "test": "jest --watch",
     "ci:test": "jest",
-    "cover": "nyc report --reporter=html --reporter=lcov > coverage.lcov && codecov",
+    "cover":
+      "nyc report --reporter=html --reporter=lcov > coverage.lcov && codecov",
     "clean": "rm -rf dist/__tests__ dist/__mocks__",
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run ci:test && npm run build",
     "build": "tsc && npm run clean"
   },
   "repository": {
