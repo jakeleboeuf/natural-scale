@@ -34,6 +34,11 @@ describe('Get scale using the each ratio', () => {
   });
 
   it('Minor Third scale array', () => {
+    const MinorThird = Scale(Ratio.MINOR_THIRD, 'rem');
+    expect(MinorThird(false, 'rem')).toEqual(MinorThirdMockInRem);
+  });
+
+  it('Minor Third scale unitless array', () => {
     const MinorThird = Scale(Ratio.MINOR_THIRD);
     expect(MinorThird()).toEqual(MinorThirdMock);
   });

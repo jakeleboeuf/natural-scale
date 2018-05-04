@@ -1,4 +1,3 @@
-import { MINOR_THIRD } from './constants';
 import * as DefaultRatios from './constants';
 import { ScaleOptions } from './types';
 import { getStep, getSteps } from './steps';
@@ -6,14 +5,14 @@ import { getStep, getSteps } from './steps';
 export const Ratio = DefaultRatios;
 
 export const Scale = (
-  interval: any = MINOR_THIRD,
+  interval: any = Ratio.MINOR_THIRD,
   unit?: string | undefined
-) => (step: number = 0, unitOverride?: string | undefined): number => {
+) => (step: number | boolean = 0, unitOverride?: string | boolean): number => {
   const unitValue = unitOverride || unit;
 
   return step
-    ? getStep(step, interval, unitValue)
-    : getSteps(interval, unitValue);
+    ? getStep({ step, interval, unit: unitValue })
+    : getSteps({ interval, unit: unitOverride });
 };
 
 export default { Scale, Ratio };

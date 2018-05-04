@@ -1,12 +1,8 @@
-export const getStep = (
-  _step: number,
-  interval: number,
-  unit: string | undefined
-) => {
-  const lowPower: number = 5 - _step;
-  const highPower: number = _step - 4;
+export const getStep = ({ step, interval, unit }: any) => {
+  const lowPower: number = 5 - step;
+  const highPower: number = step - 4;
   let result: any =
-    _step <= 3
+    step <= 3
       ? interval / Math.pow(interval, lowPower)
       : Math.pow(interval, highPower);
 
@@ -15,11 +11,12 @@ export const getStep = (
   return unit ? (value += unit) : value;
 };
 
-export const getSteps = (interval: number, unitValue: string | undefined) => {
+export const getSteps = ({ interval, unit }: any) => {
   let stepsArray: any[] = [];
 
   for (let index = 0; index < 8; index++) {
-    stepsArray.push(getStep(index + 1, interval, unitValue));
+    const step = index + 1;
+    stepsArray.push(getStep({ step, interval, unit }));
   }
 
   return stepsArray;
