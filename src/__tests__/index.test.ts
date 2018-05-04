@@ -33,13 +33,18 @@ describe('Get scale using the each ratio', () => {
     expect(SpreadScale(MinorThird, 'rem')).toEqual(MinorThirdMockInRem);
   });
 
+  it('Minor Third unitless with override', () => {
+    const MinorThird = Scale(Ratio.MINOR_THIRD, 'em');
+    expect(SpreadScale(MinorThird, 'none')).toEqual(MinorThirdMock);
+  });
+
   it('Minor Third scale array', () => {
     const MinorThird = Scale(Ratio.MINOR_THIRD, 'rem');
-    expect(MinorThird(false, 'rem')).toEqual(MinorThirdMockInRem);
+    expect(MinorThird(0, 'rem')).toEqual(MinorThirdMockInRem);
   });
 
   it('Minor Third scale unitless array', () => {
-    const MinorThird = Scale(Ratio.MINOR_THIRD, 'rem');
+    const MinorThird = Scale(Ratio.MINOR_THIRD);
     expect(MinorThird()).toEqual(MinorThirdMock);
   });
 

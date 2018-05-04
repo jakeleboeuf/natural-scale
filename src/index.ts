@@ -7,7 +7,7 @@ export const Ratio = DefaultRatios;
 export const Scale = (
   interval: any = Ratio.MINOR_THIRD,
   unit?: string | undefined
-) => (step: number | boolean = 0, unitOverride?: string | boolean): number => {
+) => (step: number | boolean = 0, unitOverride?: string | 'none'): number => {
   const unitValue = unitOverride || unit;
 
   return step
