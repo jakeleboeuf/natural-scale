@@ -1,6 +1,6 @@
 {
   "name": "natural-scale",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A simple ratio-based scale to make your type not bad",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
