@@ -4,10 +4,20 @@
 [![downloads][downloads-badge]][npmcharts]
 [![Circle CI Status][circle-ci-badge]][circle-ci-url]
 [![Code Climate][codeclimate-badge]][codeclimate-url]
+[![Support Me][support-badge-image]][support-badge-url]
 
 <!-- [![Coverage Status][coverage-badge]][coverage-url] -->
 
 **Natural Scale** is a JavaScript utility that makes creating beautiful, natural systems of scale a cinch. It's especially useful for creating a consistent [Type Scale](http://type-scale.com) accross your UI, but can be used in a veriety of ways.
+
+<div>
+  <a class="donate-with-crypto"
+     href="https://commerce.coinbase.com/checkout/ec081042-4a98-42bf-bf04-e882a81db30f">
+    <span>Donate with Crypto</span>
+  </a>
+  <script src="https://commerce.coinbase.com/v1/checkout.js">
+  </script>
+</div>
 
 ###### Example of a Type Scale in action from type-scale.com
 
@@ -121,3 +131,5 @@ const step7 = Step(7); // 9.595em
 [circle-ci-url]: https://circleci.com/gh/jakeleboeuf/natural-scale
 [npmcharts]: http://npmcharts.com/compare/natural-scale
 [downloads-badge]: https://img.shields.io/npm/dw/natural-scale.svg
+[support-badge-image]: https://img.shields.io/badge/support-jake-0666d0.svg
+[support-badge-url]: https://commerce.coinbase.com/checkout/ec081042-4a98-42bf-bf04-e882a81db30f
