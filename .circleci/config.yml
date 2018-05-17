@@ -22,11 +22,6 @@ jobs:
         
       - run: npm run ci:test
 
-      - save_cache:
-          key: v1-project-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-              - .
-
   publish:
     working_directory: ~/repo
     docker:
@@ -35,9 +30,8 @@ jobs:
     steps:
       - restore_cache:
           keys:
-          - v1-project-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
 
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: npm publish
