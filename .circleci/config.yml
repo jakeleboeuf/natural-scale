@@ -22,13 +22,19 @@ jobs:
         
       - run: npm run ci:test
 
+      - save_cache:
+          key: v1-project-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+              - .
+
   publish:
     working_directory: ~/repo
     docker:
       - image: circleci/node:7.10
 
     steps:
-      - checkout
+      - restore_cache:
+          key: v1-project-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run: npm publish
   
