@@ -1,0 +1,15 @@
+export declare const MINOR_SECOND: number;
+export declare const MAJOR_SECOND: number;
+export declare const MINOR_THIRD: number;
+export declare const MAJOR_THIRD: number;
+export declare const PERFECT_FOURTH: number;
+export declare const AUGMENTED_FOURTH: number;
+export declare const PERFECT_FIFTH: number;
+export declare const MINOR_SIXTH: number;
+export declare const MAJOR_SIXTH: number;
+export declare const MINOR_SEVENTH: number;
+export declare const MAJOR_SEVENTH: number;
+export declare const PERFECT_OCTAVE: number;
+export declare const GOLDEN_RATIO: number;
+declare const _default: object;
+export default _default;
