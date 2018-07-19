@@ -29,7 +29,7 @@
 import { Scale, Ratio } from 'natural-scale';
 
 // Create a Scale instance
-const Step = Scale(Ratio.GOLDEN_RATIO, 'rem');
+const Step = Scale({ interval: Ratio.GOLDEN_RATIO, unit: 'rem' });
 
 // Use it!
 const headingSize = Step(4);
@@ -49,7 +49,7 @@ import { render } from 'react-dom';
 import * as glamorous from 'glamorous';
 import { Scale, Ratio } from 'natural-scale';
 
-const Step = Scale(Ratio.MINOR_THIRD, 'rem');
+const Step = Scale({interval: Ratio.MINOR_THIRD, unit: 'rem'});
 
 const Title = glamorous.h1({
   fontSize: Step(5);
@@ -77,13 +77,39 @@ function App() {
 render(<App />, document.body);
 ```
 
+#### With React Native
+
+Native looks for unitless scales. To help out, we'll pass in a base font size too
+
+```jsx
+import React from 'react';
+import { Text, View } from 'react-native';
+import { Scale, Ratio } from 'natural-scale';
+const Step = Scale({ interval: Ratio.MINOR_THIRD, unit: 'rem', base: 16 });
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#ddd',
+  },
+  message: {
+    fontSize: Step(5),
+  },
+});
+
+export default () => {
+  <View style={styles.container}>
+    <Text style={styles.message}>Welcome!</Text>
+  </View>;
+};
+```
+
 ### Intervals
 
 I've included some common intervals used in standard musical tuning systems. The following intervals can be used like so:
 
 ```jsx
 import { Scale, Ratio } from 'natural-scale';
-const Step = Scale(Ratio.MINOR_SECOND);
+const Step = Scale({interval: Ratio.MINOR_Sunit: ECOND});
 
 const step1 = Step(1); // 0.702
 const step3 = Step(3); // 0.888
@@ -114,7 +140,7 @@ Of course you are free to experiment and find a scale that works well for you.
 
 ```jsx
 import { Scale } from 'natural-scale';
-const Step = Scale(2.125, 'rem');
+const Step = Scale({ interval: 2.125, unit: 'rem' });
 
 const step1 = Step(1); // 0.104em
 const step3 = Step(3); // 0.47em
