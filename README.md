@@ -10,15 +10,6 @@
 
 **Natural Scale** is a JavaScript utility that makes creating beautiful, natural systems of scale a cinch. It's especially useful for creating a consistent [Type Scale](http://type-scale.com) accross your UI, but can be used in a veriety of ways.
 
-<div>
-  <a class="donate-with-crypto"
-     href="https://commerce.coinbase.com/checkout/ec081042-4a98-42bf-bf04-e882a81db30f">
-    <span>Donate with Crypto</span>
-  </a>
-  <script src="https://commerce.coinbase.com/v1/checkout.js">
-  </script>
-</div>
-
 ###### Example of a Type Scale in action from type-scale.com
 
 ![type-scale.com Example](https://jklb-os.s3.amazonaws.com/samples/type-scale--example.gif)
