@@ -20,7 +20,7 @@ export const MajorSecondMock = [
   1.601
 ];
 
-export const MinorThirdMock = [0.578, 0.694, 0.833, 1, 1.2, 1.44, 1.728, 2.073];
+export const MinorThirdMock = [0.578, 0.694, 0.833, 1, 1.2, 1.44, 1.727, 2.073];
 
 export const MajorThirdMock = [0.512, 0.64, 0.8, 1, 1.25, 1.562, 1.953, 2.441];
 
@@ -31,7 +31,7 @@ export const MinorThirdMockInRem = [
   '1rem',
   '1.2rem',
   '1.44rem',
-  '1.728rem',
+  '1.727rem',
   '2.073rem'
 ];
 
