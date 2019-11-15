@@ -17,14 +17,14 @@
 ### Basic Usage
 
 ```jsx
-import { Scale, Ratio } from 'natural-scale';
+import { Scale, Ratio } from "natural-scale";
 
 // Create a Scale instance
-const Step = Scale({ interval: Ratio.GOLDEN_RATIO, unit: 'rem' });
+const Step = Scale({ interval: Ratio.GOLDEN_RATIO, unit: "rem" });
 
 // Use it!
 const headingSize = Step(4);
-const subheadingSize = Step(3, 'em'); // Optionally, you can override the unit of measure
+const subheadingSize = Step(3, "em"); // Optionally, you can override the unit of measure
 const bodySize = Step(2);
 ```
 
@@ -73,18 +73,18 @@ render(<App />, document.body);
 Native looks for unitless scales. To help out, we'll pass in a base font size too
 
 ```jsx
-import React from 'react';
-import { Text, View } from 'react-native';
-import { Scale, Ratio } from 'natural-scale';
-const Step = Scale({ interval: Ratio.MINOR_THIRD, unit: 'rem', base: 16 });
+import React from "react";
+import { Text, View } from "react-native";
+import { Scale, Ratio } from "natural-scale";
+const Step = Scale({ interval: Ratio.MINOR_THIRD, base: 16 });
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ddd',
+    backgroundColor: "#ddd"
   },
   message: {
-    fontSize: Step(5),
-  },
+    fontSize: Step(5)
+  }
 });
 
 export default () => {
@@ -99,8 +99,8 @@ export default () => {
 I've included some common intervals used in standard musical tuning systems. The following intervals can be used like so:
 
 ```jsx
-import { Scale, Ratio } from 'natural-scale';
-const Step = Scale({interval: Ratio.MINOR_Sunit: ECOND});
+import { Scale, Ratio } from "natural-scale";
+const Step = Scale({ interval: Ratio.MINOR_SECOND, unit: ECOND });
 
 const step1 = Step(1); // 0.702
 const step3 = Step(3); // 0.888
@@ -130,8 +130,8 @@ const step7 = Step(7); // 1.423
 Of course you are free to experiment and find a scale that works well for you.
 
 ```jsx
-import { Scale } from 'natural-scale';
-const Step = Scale({ interval: 2.125, unit: 'rem' });
+import { Scale } from "natural-scale";
+const Step = Scale({ interval: 2.125, unit: "rem" });
 
 const step1 = Step(1); // 0.104em
 const step3 = Step(3); // 0.47em
