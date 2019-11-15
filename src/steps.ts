@@ -7,7 +7,7 @@ export const getStep = ({ step, interval, unit, base }: any) => {
       : Math.pow(interval, highPower);
 
   // Round to 3 decimal places
-  let value: any = Math.floor(result * 1000) / 1000;
+  let value: any = Number((result).toFixed(3));
   if (base) {
     value *= base;
   }

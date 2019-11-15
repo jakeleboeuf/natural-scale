@@ -80,7 +80,7 @@ describe('Get scale using the each ratio', () => {
 
   it('returns correct steps in a Custom', () => {
     const CUSTOM_RATIO = 2.125;
-    const CustomRatioMock = [0.104, 0.221, 0.47, 1, 2.125, 4.515, 9.595, 20.39];
+    const CustomRatioMock = [0.104, 0.221, 0.471, 1, 2.125, 4.516, 9.596, 20.391];
     const CustomRatio = Scale({ interval: CUSTOM_RATIO });
     expect(SpreadScale(CustomRatio)).toEqual(CustomRatioMock);
   });
@@ -89,7 +89,7 @@ describe('Get scale using the each ratio', () => {
 describe('Get unitless scale for react-native', () => {
   it('returns correct steps with a base of 16', () => {
     const CUSTOM_RATIO = 2.125;
-    const CustomRatioMock = [1.664, 3.536, 7.52, 16, 34, 72.24, 153.52, 326.24];
+    const CustomRatioMock = [1.664, 3.536, 7.536, 16, 34, 72.256, 153.536, 326.256];
     const CustomRatio = Scale({ interval: CUSTOM_RATIO, base: 16 });
     expect(SpreadScale(CustomRatio)).toEqual(CustomRatioMock);
   });
