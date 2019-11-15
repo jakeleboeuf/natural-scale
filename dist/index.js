@@ -10,14 +10,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var DefaultRatios = __importStar(require("./constants"));
 var steps_1 = require("./steps");
 exports.Ratio = DefaultRatios;
-exports.Scale = function (interval, unit) {
-    if (interval === void 0) { interval = exports.Ratio.MINOR_THIRD; }
+exports.Scale = function (_a) {
+    var _b = _a.interval, interval = _b === void 0 ? exports.Ratio.MINOR_THIRD : _b, unit = _a.unit, base = _a.base;
     return function (step, unitOverride) {
         if (step === void 0) { step = 0; }
         var unitValue = unitOverride || unit;
         return step
-            ? steps_1.getStep({ step: step, interval: interval, unit: unitValue })
-            : steps_1.getSteps({ interval: interval, unit: unitOverride });
+            ? steps_1.getStep({ step: step, interval: interval, unit: unitValue, base: base })
+            : steps_1.getSteps({ interval: interval, unit: unitOverride, base: base });
     };
 };
 exports.default = { Scale: exports.Scale, Ratio: exports.Ratio };

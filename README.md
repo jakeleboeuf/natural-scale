@@ -100,7 +100,7 @@ I've included some common intervals used in standard musical tuning systems. The
 
 ```jsx
 import { Scale, Ratio } from "natural-scale";
-const Step = Scale({ interval: Ratio.MINOR_SECOND, unit: ECOND });
+const Step = Scale({ interval: Ratio.MINOR_SECOND });
 
 const step1 = Step(1); // 0.702
 const step3 = Step(3); // 0.888
